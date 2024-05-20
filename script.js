@@ -1,32 +1,23 @@
-let age = 25;
+let header = document.getElementById("Header");
+header.innerHTML = "Experience books!";
 
-const birthYear = 1995;
+let year = 2024;
+let favoritebook = "Harry Potter";
+let date = 10+9;
 
-console.log('Age', age);
+alert("Your favorite book is " + favoritebook + " and the year is " + year + " and the date is " + date);
+console.log(favoritebook + " is a great book!")
 
-let sum = age + 5
-console.log ('Your age in 5 years is', sum);
+let text;
+let today = new Date();
+let release = new Date();
 
-if (age < 18 || age > 30) {
-    console.log('You have access to the adult quizzes on this site');
+release.setFullYear(2024, 9, 10)
+
+if (today == release || today > release) {
+  text = "You can now read your book!";
 }
-
-let isMinor = age < 18;
-if (!isMinor) {
-  console.log('You are a minor, you do not have access to the adult quizzes on this site');
-  
+else {
+  text = "You can't read your book yet!";
 }
-
-let header = document.getElementById('h1');
-console.log(h1);
-
-h1.textContent = 'Welcome to Java Script!';
-
-//let button = document.getElementById('button');
-
-function onButtonClick() {
-  alert('Button clicked!');
-}
-
-const button = document.querySelector('button');
-button.addEventListener('click', onButtonClick);
+console.log(text);
